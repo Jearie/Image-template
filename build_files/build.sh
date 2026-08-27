@@ -25,3 +25,7 @@ dnf5 install -y tmux
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+# Désactive les repos terra qui posent problème lors du build ISO
+dnf5 config-manager --set-disabled terra-mesa || true
+dnf5 config-manager --set-disabled terra || true
