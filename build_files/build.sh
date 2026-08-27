@@ -29,3 +29,5 @@ systemctl enable podman.socket
 # Désactive les repos terra qui posent problème lors du build ISO
 dnf5 config-manager --set-disabled terra-mesa || true
 dnf5 config-manager --set-disabled terra || true
+# Supprime les repos terra qui posent problÃ¨me lors du build ISO
+rm -f /etc/yum.repos.d/terra*.repo
